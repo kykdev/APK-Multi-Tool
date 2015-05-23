@@ -12,7 +12,7 @@ Script 0 2>> APK-Multi-Tool.log
 cd "%~dp0"
 mode con:cols=140 lines=50
 CLS
-set usrc=9
+set usrc=0
 set resusrc=0
 set dec=0
 set capp=None
@@ -64,7 +64,6 @@ ECHO *  Windows Testers:                                                        
 ECHO ***************************************************************************************
 ECHO *  Goes to Purian23 and sga999                                                        *
 ECHO ***************************************************************************************
-PAUSE
 CLS
 :restart
 IF %dec%==0 (set decs=Sources and Resources Files)
