@@ -10,7 +10,7 @@ Script 0 2>> APK-Multi-Tool.log
 :error
 :skipme
 cd "%~dp0"
-mode con:cols=140 lines=50
+mode con:cols=132 lines=38
 CLS
 set usrc=0
 set resusrc=0
@@ -101,22 +101,9 @@ ECHO  -----------
 ECHO  19   Batch Optimize Apk (inside place-apk-here-to-batch-optimize only)
 ECHO  20   Sign an apk(Batch support)(inside place-apk-here-for-signing folder only)
 ECHO  21   Batch optimize ogg files (inside place-ogg-here only)
-ECHO  22   Clean Files/Folders
-ECHO  23   Select compression level for apk's
-ECHO  24   Select compression level for Resources.arsc
-ECHO  25   Set Max Memory Size (Only use IF getting stuck at decompiling/compiling)
-ECHO  26   Read Log
-ECHO  27   Set current project
-ECHO  28   About / Tips / Debug Section
-ECHO  29   Switch decompile mode (Allows you to pick to fully decompile the APK's or JAR's
-ECHO       or to just decompile Sources or just the Resources or do a raw dump allowing you
-ECHO       to just edit the normal images)
-ECHO  30   Donations
-ECHO       I would personally like to thank you for your superior generosity and kindness if 
-ECHO       you are one of those droid loving fans donating to the site to help keep us going.
-ECHO       We hope to continue growing and for development to keep getting bigger and bigger
-ECHO       as time goes on. Until then, Hope to see you around! Have a great day!" 
-ECHO  00   Quit
+ECHO  22   Clean Files/Folders             23   Select compression level for apk's    24   Select compression level for Resources.arsc
+ECHO  25   Set Max Memory Size             26   Read Log                              27   Set current project
+ECHO  28   About / Tips / Debug Section    29   Switch decompile mode                 00   Quit
 ECHO  -------------------------------------------------------------------------------
 SET /P menunr=Please make your decision:
 
@@ -292,6 +279,7 @@ set capp=None
 goto restart
 
 :heap
+ECHO Warning: Only use IF getting stuck at decompiling/compiling!
 set /P INPUT=Enter max size for java heap space in megabytes (eg 512) : %=%
 set heapy=%INPUT%
 CLS
