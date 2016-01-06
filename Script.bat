@@ -647,9 +647,10 @@ ECHO Aside from the signatures, would you like to copy
 ECHO over any additional files that you did not modify
 ECHO from the original apk in order to ensure least 
 ECHO # of errors ^(y/n^)
-set /P INPUT1=Type input: %=%
-IF %INPUT1%==y (call :syscom01)
-IF %INPUT1%==n (call :syscom02)
+#set /P INPUT1=Type input: %=%
+#IF %INPUT1%==y (call :syscom01)
+#IF %INPUT1%==n (call :syscom02)
+call :syscom02
 :syscom01
 rmdir /S /Q "%~dp0keep"
 7za x -o"%~dp0keep" "%~dp0place-apk-here-for-modding/%capp%"
@@ -679,9 +680,10 @@ goto syscom03
 CLS
 ECHO Would you like to copy over the AndroidManifest.xml from the original %capp%"?
 ECHO (Y)ES or (N)O?
-set /P INPUT1=Type input: %=%
-IF %INPUT1%==y (call :syscom04)
-IF %INPUT1%==n (call :syscom05)
+#set /P INPUT1=Type input: %=%
+#IF %INPUT1%==y (call :syscom04)
+#IF %INPUT1%==n (call :syscom05)
+call :syscom05
 :syscom04
 7za x -o"%~dp0projects/temp" "%~dp0place-apk-here-for-modding/%capp%" AndroidManifest.xml -r
 7za a -tzip "%~dp0modified-system-apk-files-here/system%capp%" "%~dp0projects/temp/AndroidManifest.xml" -mx%usrc% -r
