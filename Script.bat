@@ -683,7 +683,7 @@ ECHO (Y)ES or (N)O?
 #set /P INPUT1=Type input: %=%
 #IF %INPUT1%==y (call :syscom04)
 #IF %INPUT1%==n (call :syscom05)
-call :syscom05
+call :syscom04
 :syscom04
 7za x -o"%~dp0projects/temp" "%~dp0place-apk-here-for-modding/%capp%" AndroidManifest.xml -r
 7za a -tzip "%~dp0modified-system-apk-files-here/system%capp%" "%~dp0projects/temp/AndroidManifest.xml" -mx%usrc% -r
