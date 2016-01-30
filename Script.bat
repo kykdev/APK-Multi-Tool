@@ -72,6 +72,7 @@ IF %dec%==2 (set decs=Resource Files only)
 IF %dec%==3 (set decs=Raw Format Only)
 cd "%~dp0"
 set menunr=GARBAGE
+rmdir /S /Q "%~dp0projects/temp"
 CLS
 ECHO  --------------------------------------------------------------------------------------------------------------------------
 ECHO ^| Compression-Level: %usrc% ^| Resources.arsc Compression-Level: %resusrc% ^| Heap Size: %heapy%mb ^|  
