@@ -19,8 +19,11 @@ $RECYCLE.BIN/
 *.log
 
 # Project folders
-place-apk-here-for-modding
+modified-system-apk-files-here/
+place-apk-here-for-modding/
+place-apk-here-for-signing/
 projects/
 
 # Personal files
 push_*.bat
+other/*.tmp*
