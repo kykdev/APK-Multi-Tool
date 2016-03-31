@@ -10,7 +10,7 @@ Script 0 2>> APK-Multi-Tool.log
 :error
 :skipme
 cd "%~dp0"
-mode con:cols=132 lines=38
+mode con:cols=143 lines=38
 CLS
 set usrc=0
 set resusrc=0
